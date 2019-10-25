@@ -51,7 +51,6 @@ bool Check (int area, int base, int altezza){
     else
         var = false;
     return var;
-    
 }
 
 
