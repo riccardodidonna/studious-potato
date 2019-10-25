@@ -8,41 +8,41 @@
 #include <iostream>
 
 using namespace std;
+
 struct punto{
     int x;
     int y;
 };
+
 struct rettangolo{
     punto a;
     punto c;
 };
 
 bool Check (int area, int base, int altezza){
+    bool var=true;
         if (area < 0){
         cout << "Area < 0 -> i due rettangoli non si intersecano, riprova" << endl;
-        return true;
     }
     else if (base == 0){
         cout << "Base = 0 -> errore nell'inserimento dei rettangoli, riprova" << endl;
-       return true;
     }
     else if (altezza == 0){
         cout << "Altezza = 0 -> errore nell'inserimento dei rettangoli, riprova" << endl;
-        return true;
     }
     else{
-        return false;
+        var = false;
+        return var;
     }
     
+    
 }
-
 
 
 int main(){
     rettangolo uno, due, inters;
     int base, altezza, area;
     do{
-
         cout << "Inserisci angolo A (x,y) del rettangolo n.1: "<< endl;
         cin >> uno.a.x >> uno.a.y;
         cout << "Inserisci angolo C (xy): del rettangolo n.1: " << endl;
@@ -64,6 +64,7 @@ int main(){
         altezza = inters.c.y - inters.a.y;
         area = base * altezza;
 
+        
        
         }while(Check(base, area, altezza)==true);
         return 0;
