@@ -36,7 +36,7 @@ int main()
     cin>>gn>>mn>>an;
     if(gn>NumGiorniMese(mn,an)||ga>NumGiorniMese(ma,aa)||an>aa||gn<1||ga<1||mn<1||ma<1||mn>12||ma>12)
         cout <<"ERROR\n";
-    else if(aa-an>100)
+    else if(AnniDiff(aa,an,ma,mn,ga,gn)>100)
         cout << "Eta' superiore a 100 anni ---> "<< AnniDiff(aa,an,ma,mn,ga,gn)<<endl;
     else if (AnniDiff(aa,an,ma,mn,ga,gn)<1)
     {
